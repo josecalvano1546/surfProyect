@@ -3,7 +3,6 @@ import React, { Suspense } from 'react';
 import './App.scss';
 import Loading from './Component/Loading/Loading';
 import gsap from 'gsap'; 
-import {Button} from 'react-bootstrap';
 import {ScrollToPlugin} from "gsap/ScrollToPlugin";
 
 const ContainerFirst = React.lazy(() => import('./Component/ContainerFirst/ContainerFirst'));
