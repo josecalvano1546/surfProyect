@@ -2,10 +2,9 @@ import React, { useEffect, useRe, useState } from 'react';
 import estilos from './ContainerFirst.scss';
 import gsap,{Power3, Power0} from 'gsap'; 
 import { CSSRulePlugin } from "gsap/CSSRulePlugin";
-
-
 import {Nav, Item, Link} from 'react-bootstrap';
-import { LogoFacebook, LogoTwitter, LogoLinkedin } from 'react-ionicons' 
+import { LogoFacebook, LogoTwitter, LogoLinkedin, ArrowDownOutline} from 'react-ionicons' 
+
 
 function ContainerFirst () {
     gsap.registerPlugin(CSSRulePlugin);
@@ -75,6 +74,23 @@ function ContainerFirst () {
             }
             ,'<='
             )
+            .from('.flecha',{
+                opacity:0, 
+                y: 20, 
+                easy:Power3.easeOut, 
+                duration:0.6
+            }
+            ,'<=' 
+            )
+            .from('.arrowDown',{
+                y: -3, 
+                duration:1,
+                delay:0.5, 
+                repeat:-1, yoyo:true,
+            }
+             
+            )
+
     },[])
 
 useEffect(()=>{
@@ -147,31 +163,41 @@ useEffect(()=>{
                         <li class="nav-item icons">
                             <LogoFacebook
                                 color={'#FFFF'}
-                                height="30px"
-                                width="30px"
-                                onClick={() => alert('Hi!')}
+                                height="25px"
+                                width="25px"
+                                onClick={() => alert('Hi i am Jose Calvano!')}
                             />
                         </li>
                         <li class="nav-item icons">
                             <LogoTwitter
                                 color={'#FFFF'}
-                                height="30px"
-                                width="30px"
-                                onClick={() => alert('Hi!')}
+                                height="25px"
+                                width="25px"
+                                onClick={() => alert('Hi i am Jose Calvano!')}
                             />
                         </li>
                         <li class="nav-item icons">
                             <LogoLinkedin
                                 color={'#FFFF'}
-                                height="30px"
-                                width="30px"
-                                onClick={() => alert('Hi!')}
+                                height="25px"
+                                width="25px"
+                                onClick={() => alert('Hi i am Jose Calvano!')}
                             />
                         </li>
                     </ul>
                 </div>
             </div>
-        
+
+            <div class="flecha">
+                <ArrowDownOutline
+                    style={{ verticalAlign: 'middle' }}
+                    color={'#FFFF'}
+                    height='100%'
+                    width='100%'
+                    cssClasses="arrowDown"
+                />
+            
+            </div>
         </div>
         
 
