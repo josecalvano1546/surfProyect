@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
+@import "~bootstrap/scss/bootstrap";
+
+.App {
+  text-align: center;
+}
+
+p{
+  font-family: 'Prata', serif;
+  font-size:40px;
+}
+p.textSub{
+  font-family: 'Prata', serif;
+  font-size:20px;
+}
+
+.container-fluid{
+  height:100vh;
+}
+
