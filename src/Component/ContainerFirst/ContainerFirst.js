@@ -12,7 +12,7 @@ function ContainerFirst () {
     const [mover,setMover] = useState(false)
 
     let imageReveal = CSSRulePlugin.getRule(".container-fluid.first:after");
-    let imageReveal2 = CSSRulePlugin.getRule(".container-fluid.first2:after");
+    let imageReveal2 = CSSRulePlugin.getRule(".container-fluid.grey:after");
     let textoReveal = CSSRulePlugin.getRule(".mensaje3r:after");
 
     var tl = gsap.timeline();
@@ -117,7 +117,9 @@ useEffect(()=>{
  return(
 
     <div className="container-fluid first" >
-        <div className="container-fluid first2"> 
+
+        <div className="container-fluid grey"> 
+
             <view class="navigation">
                 <ul class="nav justify-content-center">
                     <li class="nav-item">
