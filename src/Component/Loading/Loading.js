@@ -7,7 +7,7 @@ const Loading = () => {
     return(
     
     <div class='container-fluid loading'>
-       <div class="row align-items-center">
+       <div class="row align-items-center load">
             <div class="col-md-6 offset-md-3">
                <p class="textSub"> Paseos Surf </p>
             </div>

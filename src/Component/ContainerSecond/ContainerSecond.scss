@@ -1,4 +1,33 @@
 
 .container-fluid.second{
-    background-color: orange;
+    background-color: white;
+}
+
+.title{
+   // background-color:pink;
+    text-align: center;
+    padding-top: 2%;
+}
+
+.subtitleSecond p{
+    font-family: 'Roboto', sans-serif;
+    font-size:18px;
+    text-align: center;
+  }
+@media (max-width: 768px) {
+
+    
+    .container-fluid.second{
+        height:auto;
+    }
+
+}
+@media (max-width: 576px) {
+
+    .container-fluid.second{
+        height:auto;
+    }
+    
+
+
 }

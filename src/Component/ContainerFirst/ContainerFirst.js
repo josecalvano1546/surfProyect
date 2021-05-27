@@ -1,8 +1,7 @@
-import React, { useEffect, useRe, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import estilos from './ContainerFirst.scss';
 import gsap,{Power3, Power0} from 'gsap'; 
 import { CSSRulePlugin } from "gsap/CSSRulePlugin";
-import {Nav, Item, Link} from 'react-bootstrap';
 import { LogoFacebook, LogoTwitter, LogoLinkedin, ArrowDownOutline} from 'react-ionicons' 
 
 
@@ -14,16 +13,26 @@ function ContainerFirst () {
     let imageReveal2 = CSSRulePlugin.getRule(".container-fluid.grey:after");
     let textoReveal = CSSRulePlugin.getRule(".mensaje3r:after");
 
+    let containerfluidfirst = useRef(null);
+    let mensaje3r = useRef(null);
+    let subtitle = useRef(null);
+    let navjustifycontentcenter = useRef(null);
+    let navflexcolumnaligncontentend = useRef(null);
+    let flecha = useRef(null);
+
+
+    
+
     var tl = gsap.timeline();
 
     useEffect(()=>{
 
-        tl.from('.container-fluid.first', {
+        tl.from(containerfluidfirst, {
                 duration: 1.8,
                 scale: 2,
                 ease: Power3.easeInOut,
             }, )
-            .from('.mensaje3r', {
+            .from(mensaje3r, {
                // opacity:0, 
                // y: 40, 
                 easy:Power3.easeOut, 
@@ -48,25 +57,25 @@ function ContainerFirst () {
                 ease: Power3.easeInOut }
                 , '<='
             )
-            .to('.mensaje3r',{
+            .to(mensaje3r,{
                 y: -20, 
                 easy:Power3.easeOut, 
                 duration:0.8
             })
-            .from('.subtitle',{
+            .from(subtitle,{
                 opacity:0, 
                 y: 40, 
                 easy:Power3.easeOut, 
                 duration:0.8
             }, '<='
             )
-            .from('.nav.justify-content-center',{
+            .from(navjustifycontentcenter,{
                 opacity:0, 
                 y: -20, 
                 easy:Power3.easeOut, 
                 duration:0.6
             })
-            .from('.nav.flex-column.align-content-end',{
+            .from(navflexcolumnaligncontentend,{
                 opacity:0, 
                 x: 20, 
                 easy:Power3.easeOut, 
@@ -74,7 +83,7 @@ function ContainerFirst () {
             }
             ,'<='
             )
-            .from('.flecha',{
+            .from(flecha,{
                 opacity:0, 
                 y: 20, 
                 easy:Power3.easeOut, 
@@ -94,6 +103,7 @@ function ContainerFirst () {
     },[])
 
 useEffect(()=>{
+
     function getSamePageAnchor (link) {
         if (
           link.protocol !== window.location.protocol ||
@@ -132,12 +142,16 @@ useEffect(()=>{
 
  return(
 
-    <div className="container-fluid first" >
+    <div className="container-fluid first" 
+    ref={el => (containerfluidfirst = el )}
+    >
 
         <div className="container-fluid grey"> 
 
             <view class="navigation">
-                <ul class="nav justify-content-center">
+                <ul class="nav justify-content-center"
+                    ref={el => (navjustifycontentcenter = el )}
+                > 
                     <li class="nav-item">
                         <a class="nav-link" href="#containerFirst" onClick={()=>{setMover(!mover)}}>Home</a>
                     </li>   
@@ -150,16 +164,23 @@ useEffect(()=>{
                 </ul>
             </view>
 
-            <div className="mensaje3r" >
+            <div className="mensaje3r" 
+                ref={el => (mensaje3r = el )}
+            >
                 <p>  Paseos Surf  </p>
             </div>
-            <div className="subtitle" >
+            <div className="subtitle" 
+                ref={el => (subtitle = el )}
+            >
                 <p className="textSub"> “Surf and feel your life be changed forever” </p>
             </div>
 
-            <div class="row align-items-center">
+            <div class="row align-items-center iconos">
                 <div class="col-lg-6 offset-lg-6 d-none d-lg-block">
-                    <ul class="nav flex-column align-content-end">
+                    <ul class="nav flex-column align-content-end"
+                        ref={el => (navflexcolumnaligncontentend = el )}
+                    >
+                    
                         <li class="nav-item icons">
                             <LogoFacebook
                                 color={'#FFFF'}
@@ -188,7 +209,9 @@ useEffect(()=>{
                 </div>
             </div>
 
-            <div class="flecha">
+            <div class="flecha"
+            ref={el => (flecha = el )}
+            >
                 <ArrowDownOutline
                     style={{ verticalAlign: 'middle' }}
                     color={'#FFFF'}

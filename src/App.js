@@ -1,42 +1,44 @@
-import React, { Suspense } from 'react';
-
+import React, { Suspense, useEffect } from 'react';
 import './App.scss';
 import Loading from './Component/Loading/Loading';
-import gsap from 'gsap'; 
-import {ScrollToPlugin} from "gsap/ScrollToPlugin";
+// import gsap from 'gsap'; 
+// import {ScrollToPlugin} from "gsap/ScrollToPlugin";
+// import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-const ContainerFirst = React.lazy(() => import('./Component/ContainerFirst/ContainerFirst'));
-const ContainerSecond = React.lazy(() => import('./Component/ContainerSecond/ContainerSecond'));
-const ContainerThird= React.lazy(() => import('./Component/ContainerThird/ContainerThird'));
+// import  ContainerFirst from './Component/ContainerFirst/ContainerFirst';
+// import ContainerSecond from './Component/ContainerSecond/ContainerSecond';
+// import ContainerThird from './Component/ContainerThird/ContainerThird';
+
+
+//const ContainerFirst = React.lazy(() => import('./Component/ContainerFirst/ContainerFirst'));
+//const ContainerSecond = React.lazy(() => import('./Component/ContainerSecond/ContainerSecond'));
+//const ContainerThird= React.lazy(() => import('./Component/ContainerThird/ContainerThird'));
+const FirstContent = React.lazy(() => import('./Component/FirstContent/FirstContent'));
+
 
 function App() {
-  gsap.registerPlugin( ScrollToPlugin );
-
-  // document.querySelectorAll("nav button").forEach((btn, index) => {
-  //   btn.addEventListener("click", () => {
-  //       console.log("index -->" + (index + 1))
-  //     gsap.to(window, {duration: 1, scrollTo:{y:"#section" + (index + 1)}});
-  //   });
-  // });
-
-  // Detect if a link's href goes to the current page
+  // gsap.registerPlugin( ScrollToPlugin );
+  // gsap.registerPlugin(ScrollTrigger);
 
   return (
     <Suspense fallback={
       <Loading/>
     }>
-      <section id="containerFirst">
-        <ContainerFirst/>
-      </section>
+    {/* // <div>
+    //   <section id="containerFirst">
+    //     <ContainerFirst/>
+    //   </section>
 
-      <section id="containerSecond">
-        <ContainerSecond/>
-      </section>
+    //   <section id="containerSecond">
+    //     <ContainerSecond/>
+    //   </section>
 
-      <section id="containerThird">
-        <ContainerThird/>
-      </section>
-   
+    //   <section id="containerThird">
+    //     <ContainerThird/>
+    //   </section>
+    //   </div> */}
+      <FirstContent/>
+
     </Suspense>
   );
 }

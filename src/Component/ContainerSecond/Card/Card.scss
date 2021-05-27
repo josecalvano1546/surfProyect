@@ -1,0 +1,113 @@
+h3{
+    font-family: 'Roboto', sans-serif;
+}
+.card{
+    position: relative;
+    overflow: hidden;
+    //background-color:purple;
+    width:70%;
+    margin-left: 20%;
+
+}
+
+.col-md-4.col-sm-12 {
+    padding-top: 5%;
+}
+.card:before{
+    position: absolute;
+    content: "";
+    width:90%;
+    height:220%;
+    background-color: rgba(0,0,0,0.5);
+    top:-50%;
+    left:-100%;
+    z-index: 1;
+    transform: rotate(25deg);
+    transform-origin: center top 0;
+    transition: .5s,
+}
+
+.card:hover:before{
+    left:10%;
+}
+.card img{
+  
+    justify-self: center;
+}
+.cardesc{
+    width:100%;
+    padding:0 20px;
+    position: absolute;
+    top: -100%;
+    color: white;
+    left: 0;
+    z-index: 2;
+    transition:1.1s;
+}
+
+.card:hover .cardesc{
+    top:80px;
+}
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) { 
+    
+    .card:before{
+        width:150%;
+        height:300%;
+        top:-10%;
+        left:-180%;
+    }
+    .card:hover .cardesc{
+        top:30px;
+    }
+ }
+//md
+@media (max-width: 991.98px) {
+    .card:before{
+        width:150%;
+        height:300%;
+        top:-10%;
+        left:-180%;
+    }
+    .card:hover .cardesc{
+        top:30px;
+    }
+    
+
+} 
+
+
+@media (max-width: 768px) {
+   
+    .card:before{
+        width:100%;
+        height:220%;
+        top:-50%;
+        left:-100%;
+    }
+    .card:hover .cardesc{
+        top:80px;
+    }
+    
+    
+    .card{
+
+       // background-color:aqua;
+
+        margin-left: 27%;
+        width:45%;
+    }
+
+}
+
+@media (max-width: 576px) {
+
+    .card{
+        margin-left: 25%;
+        width:50%;
+    }
+
+
+
+}

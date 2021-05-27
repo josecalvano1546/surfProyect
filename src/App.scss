@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 @import "~bootstrap/scss/bootstrap";
+
 
 .App {
   text-align: center;
@@ -13,7 +17,10 @@ p.textSub{
   font-family: 'Prata', serif;
   font-size:20px;
 }
-
+h4{
+  font-family: 'Prata', serif;
+  font-size:40px;
+}
 .container-fluid{
   height:100vh;
 }
