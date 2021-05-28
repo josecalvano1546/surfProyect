@@ -21,18 +21,12 @@ function ContainerFirst () {
             scrollTrigger:{ 
                 trigger:".prueba", // start the animation when ".box" enters the viewport (once)
                 start:"-500 center",
-                markers:true,
+                //markers:true,
                 toggleActions:"restart none none none"
             },
-        //     opacity:0, 
-        //     y: 40, 
-        //     easy:Power3.easeOut, 
-        //     duration:3,
             y:400, 
             stagger:{
                 amount:0.2,
-                //each:0.2,
-                //from:"end"
                 from:"center"
         }}
         )
@@ -48,7 +42,7 @@ function ContainerFirst () {
             <h4>World's Best Surf Destinations</h4>
         </div>
       <div class="row justify-content-center subSec ">
-        <div class="col-8  subtitleSecond">
+        <div class="col-8  subtitleSecond d-none d-md-block">
             <p>There are a whole lot of surf destinations around the world with fun waves. Beach breaks, point breaks, reef breaks, barrels, beginner waves and beyond – the world is full of all types of waves for all types of abilities and styles.  </p>
         </div>
         </div>
