@@ -3,6 +3,7 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+        width: 100%;
         &:after {
             content:'';
             position: absolute;
@@ -12,7 +13,7 @@
             left: 0;
             background:#282c34;
             z-index: -1;
-        }
+        }  
     }
 
     .container-fluid.grey{
@@ -58,18 +59,22 @@
         }
     }
     .nav-item{
+
         a{
             color:white;
         }
     }
     .nav-item.icons{
+
         margin-top: 40px;
         margin-right: 20px;
     }
     .nav.justify-content-center{
         padding-top:20px;
+
     }
     .flecha{
+
         width: 50px;
         height: 50px;
         position: absolute;
@@ -80,6 +85,7 @@
     }
 
     .row.align-items-center.iconos{
+
         height:80vh;
     }
     
@@ -101,7 +107,7 @@
         .subtitle{
             position: absolute;
             top: 50%;
-            left: 23%;
+            left: 30%;
         }
 
     }
@@ -111,12 +117,12 @@
         .mensaje3r{
             position: absolute;
             top: 40%;
-            left: 20%;
+            left: 22%;
         }
         .subtitle{
             position: absolute;
             top: 50%;
-            left: 5%;
+            left: 14%;
         }
 
         .flecha{

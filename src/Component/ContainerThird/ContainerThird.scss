@@ -1,8 +1,9 @@
 .container-fluid.third{
-   height: auto;
-}
-
-a {
+  background-color: white;
+    height: auto;
+    width: 100%;
+ }
+ a {
     color: #555;
     font-weight: 400;
   }
@@ -10,7 +11,9 @@ a {
   .pSection {
     position: relative;
     padding-top: 200px;
-    padding-bottom: 300px;
+    padding-bottom: 200px;
+    margin-top: 3%;
+    margin-bottom: 3%;
   }
   
   .container {
@@ -26,22 +29,49 @@ a {
     background-color: rgba(0,0,0,0.6);
     color: white;
     padding: 40px 60px;
+
   }
+.par{
+  width: 65%;
+  background-color: rgba(0,0,0,0.6);
+  color: white;
+  padding: 40px 60px;
+  margin-left: 35%;
+}
+
   
   .pImage {
-    width: 70%;
+    width: 60%;
     position: absolute;
     top: 0;
     right: 0;
-    max-height: 900px;
+    height:75vh ;
   }
+.imgPar{
+  width: 60%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height:75vh ;
+}
 
   .textImg{
      size:10px;
   }
 
   .title{
-    // background-color:pink;
      text-align: center;
      padding-top: 2%;
  }
+
+  //md
+  @media (max-width: 991.98px) {
+
+    .pContent {
+        padding: 10px 30px;
+    }
+    .pImage {
+        width: 75%;
+    }
+
+}

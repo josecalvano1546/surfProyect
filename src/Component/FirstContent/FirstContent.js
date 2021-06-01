@@ -7,7 +7,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import  ContainerFirst from './../../Component/ContainerFirst/ContainerFirst';
 import ContainerSecond from './../../Component/ContainerSecond/ContainerSecond';
 import ContainerThird from './../../Component/ContainerThird/ContainerThird';
-import Fotter from './../ContainerThird/Footer/Footer'
+import Fotter from '../Footer/Footer'
 
 function FirstContent() {
   gsap.registerPlugin( ScrollToPlugin );
@@ -26,7 +26,7 @@ function FirstContent() {
       <section id="containerThird">
         <ContainerThird/>
       </section>
-
+      
       <Fotter/>
     </div>
 
