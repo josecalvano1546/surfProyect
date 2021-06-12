@@ -25,9 +25,8 @@ function FirstContent() {
 
       <section id="containerThird">
         <ContainerThird/>
+        <Fotter/>
       </section>
-      
-      <Fotter/>
     </div>
 
   );
